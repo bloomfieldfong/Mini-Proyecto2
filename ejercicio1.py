@@ -5,6 +5,7 @@
 
 import numpy as np
 import random
+import math
 
 def normal(mu = 900, sigma = 200):
     while True:
@@ -19,15 +20,26 @@ def normal(mu = 900, sigma = 200):
                 return mu + sigma*y
 
 
-def generador(pi, x):
+def uniforme():
+    j = np.random.uniform(0, 1)
+    return j
+
+def generador():
     v = 0
-    for i in range(0, len(x)):
-        if(x[i] == "norm"):
-            v += pi[i]*normal()
-
-        if(x[i]=="uniforme"):
-            v += pi[i]*np.random.uniform(0, 1)
-    return v
+    u = random.random()
+    valor_esperado = 0.1*normal() + 0.9*uniforme()
+    return valor_esperado
 
 
-print(generador([0.1,0.9], ["norm", "uniforme"]))
+
+def generador2(iter):
+    gen_tot = 0
+    for i in range(0, iter):
+        gen = generador()
+        gen_tot += gen
+    return gen_tot/iter
+
+valor_esperado = 0.1*normal() + 0.9*uniforme()
+print("Valor con 100 iteraciones: " + str(generador2(100)) + " contra: " + str(valor_esperado))
+print("Valor con 1000 iteraciones: " + str(generador2(1000)) + " contra: " + str(valor_esperado))
+print("Valor con 10000 iteraciones: " + str(generador2(10000)) + " contra: " + str(valor_esperado))

@@ -54,17 +54,17 @@ def vpn(proy, iter):
             t5 = normal(350, 150)
             t6 = normal(400, 150)
             uni = uniform(1600, 6000)
-            vpn = i0 + (t1/(1 + 0.1)**1) + (t2/(1 + 0.1)**2) + (t3/(1 + 0.1)**3) + (t4/(1 + 0.1)**4) + (t5/(1 + 0.1)**5) + (t6/(1 + 0.1)**6) + (uni/(1 + 0.1)**7)
+            vpn = i0 + (t1/((1 + 0.1)**1)) + (t2/(1 + 0.1)**2) + (t3/(1 + 0.1)**3) + (t4/(1 + 0.1)**4) + (t5/(1 + 0.1)**5) + (t6/(1 + 0.1)**6) + (uni/(1 + 0.1)**7)
             vpn_net += vpn
         return vpn_net/iter
 
 print("---------------- HOTEL ----------------")
 print("Con 100 iteraciones:" + "\n" + "\tVPN = " + str(vpn(1, 100)))
-print("Con 1000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(1, 100)))
-print("Con 10000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(1, 100)))
+print("Con 1000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(1, 1000)))
+print("Con 10000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(1, 10000)))
 
 
 print("\n------------------ CC ------------------")
 print("Con 100 iteraciones:" + "\n" + "\tVPN = " + str(vpn(2, 100)))
-print("Con 1000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(2, 100)))
-print("Con 10000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(2, 100)))
+print("Con 1000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(2, 1000)))
+print("Con 10000 iteraciones:" + "\n" + "\tVPN = " + str(vpn(2, 10000)))
