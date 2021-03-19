@@ -20,7 +20,7 @@ decorator==4.3.0
 Django==2.1.2
 django-filter==1.1.0
 django-graphql-jwt==0.1.14
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 dnspython==1.16.0
 docutils==0.14
 entrypoints==0.2.3
