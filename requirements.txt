@@ -70,7 +70,7 @@ pyasn1-modules==0.2.6
 pycares==3.0.0
 pycparser==2.19
 Pygments==2.2.0
-PyJWT==1.6.4
+PyJWT==2.4.0
 pyparsing==2.3.1
 PyQt4==4.11.4
 python-dateutil==2.7.4
